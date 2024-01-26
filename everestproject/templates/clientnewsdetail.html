@@ -1,0 +1,23 @@
+{% extends 'clientbase.html' %}
+
+{% block content %}
+<h1>{{newsdetail.title}}</h1>
+<br>
+{{newsdetail.content|safe}}
+<br>
+Category: {{newsdetail.Category}}
+<br>
+View: {{newsdetail.viewed}}
+<br>
+<img src="{{newsdetail.image.url}}" height="250" width="200">
+<br>
+Category: {{detail.category}}
+<br>
+View: {{detail.viewed}}
+<br>
+{% if request.user.username %}
+<a href="/news/create/{{newsdetail.id}}/">Update</a>
+<br>
+<a href="/news/delete/{{newsdetail.id}}/">Delete</a>
+{% endif %}
+{% endblock %}

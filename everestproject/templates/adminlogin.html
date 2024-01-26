@@ -1,0 +1,12 @@
+<title>Login</title>
+</head>
+<body>
+    <form action=""method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-outline-success w-100">Login</button>
+        {% if error %}
+        <li>{{error}}</li>
+        {% endif %}
+    </form>
+</body>

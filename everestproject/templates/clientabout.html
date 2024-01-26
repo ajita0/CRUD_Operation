@@ -1,0 +1,12 @@
+{% extends 'clientbase.html' %}
+{% block about %}active{% endblock %}
+{% block content %}
+<h1>about page</h1>
+<ul>
+    {% for cat in categories%}
+    <li>
+        {{cat.title}}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

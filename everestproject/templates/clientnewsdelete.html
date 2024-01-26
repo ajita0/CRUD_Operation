@@ -1,0 +1,11 @@
+{% extends 'clientbase.html' %}
+
+{% block content %}
+<h1>Delete page</h1>
+<form method="POST">
+    {% csrf_token %}
+    <p>Are you sure to Delete "{{object}}"</p>
+    <br>
+    <input type="submit" value="confirm">
+</form>
+{% endblock %}
